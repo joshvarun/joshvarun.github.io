@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #333333; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 1rem; }
+  .heading-primary--sub {
+    font-weight: 700;
+    letter-spacing: .4rem; }
+
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1.5rem 6rem;
+  border-radius: 35px;
+  border: none;
+  box-shadow: 0rem 2rem 3rem rgba(0, 0, 0, 0.8);
+  transition: all 0.5s; }
+
+.btn:hover {
+  transform: translateY(-0.8rem);
+  background-color: #0277BD;
+  box-shadow: 0rem 2rem 3rem rgba(0, 0, 0, 0.8);
+  color: #fff; }
+
+.btn:active, .btn:focus {
+  transform: translateY(-0.4rem);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.8); }
+
+.btn-white {
+  background-color: #fff;
+  color: #333333; }
+
+.header {
+  position: relative;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/hero.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: top; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left; }
+  .header__img {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translate(-50%, -50%); }
+    .header__img--self {
+      height: 40vh;
+      border-radius: 100%;
+      margin: 3rem;
+      transition: all 0.5s; }
+      .header__img--self:hover {
+        transform: scale(1.1);
+        border: 10px solid #03A9F4; }
