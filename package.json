@@ -1,0 +1,22 @@
+{
+  "name": "joshvarun.github.io",
+  "version": "1.0.0",
+  "description": "A personal website for Varun Joshi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshvarun/joshvarun.github.io.git"
+  },
+  "author": "Varun Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshvarun/joshvarun.github.io/issues"
+  },
+  "homepage": "https://github.com/joshvarun/joshvarun.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
