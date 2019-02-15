@@ -1,12 +1,11 @@
 @import "abstract/variables";
-
-
+@import "abstract/utilities";
+@import "abstract/mixins";
 @import "base/base";
 @import "base/typography";
-
 @import "components/button";
-
-
-@import "abstract/variables";
-
+@import "pages/home";
 @import "layout/header";
+@import "layout/bg-video";
+@import "layout/card";
+@import "layout/grid";
