@@ -10,6 +10,9 @@
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
 
+.u-margin-top-very-small {
+  margin-top: 1.5rem !important; }
+
 .u-margin-top-small {
   margin-top: 3rem !important; }
 
@@ -94,7 +97,25 @@ body {
   background-color: #fff;
   color: #333333; }
 
-/* The actual timeline (the vertical ruler) */
+.btn-text:link, .btn-text:visited {
+  color: #03A9F4;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #03A9F4;
+  padding: .3rem;
+  font-size: 1.4rem;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: #03A9F4;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0px); }
+
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -120,6 +141,13 @@ body {
     background-color: white;
     position: relative;
     border-radius: 6px; }
+    .timeline__content--highlight {
+      font-size: 1.6rem;
+      padding-top: 2rem;
+      color: #ff7730;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      font-weight: 700; }
   .timeline::after {
     content: "";
     position: absolute;
