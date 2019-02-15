@@ -94,6 +94,74 @@ body {
   background-color: #fff;
   color: #333333; }
 
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .timeline__container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%; }
+    .timeline__container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid #FF9F55;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1; }
+  .timeline__content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px; }
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; }
+
+.left {
+  left: 0; }
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white; }
+
+.right {
+  left: 50%; }
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent; }
+    .right::before::after {
+      left: -16px; }
+  .right::after {
+    left: -16px; }
+
 .section-about {
   margin-top: 8rem;
   position: relative; }
@@ -153,22 +221,56 @@ body {
   height: 35rem;
   overflow: hidden;
   transition: all 0.3s;
+  position: relative;
   position: relative; }
   .card:hover {
     transform: translateY(-1.5rem) scale(1.1); }
   .card__image--1 {
+    background-blend-mode: screen;
+    background-size: cover;
     height: 12rem;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-    background-image: linear-gradient(to right, #B3E5FC, #0277BD); }
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-image: linear-gradient(to right, #7ed56f, #28b485), url(/img/natours.png); }
+  .card__image--2 {
+    background-blend-mode: screen;
+    background-size: cover;
+    height: 12rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-image: linear-gradient(to right, #ffb900, #ff7730), url(/img/world_cuisines.png); }
+  .card__image--3 {
+    background-blend-mode: screen;
+    background-size: cover;
+    height: 12rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-image: linear-gradient(to right, #EF5350, #B71C1C), url(/img/pigdice.png); }
+  .card__image--4 {
+    background-blend-mode: screen;
+    background-size: cover;
+    height: 12rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-image: linear-gradient(to right, #B0BEC5, #455A64), url(/img/linux-server.png); }
   .card__title {
-    position: absolute;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    font-weight: 300;
     text-transform: uppercase;
+    color: #fff;
+    position: absolute;
     text-align: center;
-    top: 3rem;
-    right: 50%;
-    transform: translateX(50%);
-    color: #fff; }
+    top: 9rem;
+    right: 1rem;
+    width: 90%; }
+  .card__title-span {
+    padding: 0.6rem 1rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__title-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__title-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__title-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(239, 83, 80, 0.85), rgba(183, 28, 28, 0.85)); }
+    .card__title-span--4 {
+      background-image: linear-gradient(to right bottom, rgba(176, 190, 197, 0.85), rgba(69, 90, 100, 0.85)); }
   .card__details {
     margin-top: 0.5rem; }
     .card__details ul {
@@ -178,9 +280,43 @@ body {
         margin: 0 2.5rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #c8c8c8; }
-        .card__details ul li a:link, .card__details ul li a:visited {
-          text-decoration: none;
-          color: #0277BD; }
+
+.tech-img {
+  width: auto;
+  height: 3rem;
+  padding: 0 1rem; }
+
+.live-link--1:link, .live-link--1:visited {
+  text-decoration: none;
+  color: #0277BD;
+  text-transform: uppercase;
+  transition: all .2s; }
+  .live-link--1:link:hover, .live-link--1:visited:hover {
+    color: #28b485; }
+
+.live-link--2:link, .live-link--2:visited {
+  text-decoration: none;
+  color: #0277BD;
+  text-transform: uppercase;
+  transition: all .2s; }
+  .live-link--2:link:hover, .live-link--2:visited:hover {
+    color: #ff7730; }
+
+.live-link--3:link, .live-link--3:visited {
+  text-decoration: none;
+  color: #0277BD;
+  text-transform: uppercase;
+  transition: all .2s; }
+  .live-link--3:link:hover, .live-link--3:visited:hover {
+    color: #B71C1C; }
+
+.live-link--4:link, .live-link--4:visited {
+  text-decoration: none;
+  color: #0277BD;
+  text-transform: uppercase;
+  transition: all .2s; }
+  .live-link--4:link:hover, .live-link--4:visited:hover {
+    color: #455A64; }
 
 .row {
   max-width: 114rem;

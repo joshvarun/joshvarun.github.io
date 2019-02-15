@@ -5,29 +5,67 @@
     height: 35rem;
     overflow: hidden;
     transition: all 0.3s;
-
-    &:hover{
+    position: relative;
+    &:hover {
         transform: translateY(-1.5rem) scale(1.1);
     }
-    
     position: relative;
     &__image--1 {
+        background-blend-mode: screen;
+        background-size: cover;
         height: 12rem;
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        background-image: linear-gradient(to right, $color-natours-light, $color-natours-dark), url(/img/natours.png);
     }
-
+    &__image--2 {
+        background-blend-mode: screen;
+        background-size: cover;
+        height: 12rem;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        background-image: linear-gradient(to right, $color-wc-light, $color-wc-dark), url(/img/world_cuisines.png);
+    }
+    &__image--3 {
+        background-blend-mode: screen;
+        background-size: cover;
+        height: 12rem;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        background-image: linear-gradient(to right, $color-pigdice-light, $color-pigdice-dark), url(/img/pigdice.png);
+    }
+    &__image--4 {
+        background-blend-mode: screen;
+        background-size: cover;
+        height: 12rem;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        background-image: linear-gradient(to right, $color-linux-light, $color-linux-dark), url(/img/linux-server.png);
+    }
     &__title {
-        position: absolute;
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+        font-weight: 300;
         text-transform: uppercase;
-        text-align: center;
-        top: 3rem;
-        right: 50%;
-        transform: translateX(50%);
         color: $color-white;
+        position: absolute;
+        text-align: center;
+        top: 9rem;
+        right: 1rem;
+        width: 90%;
     }
-
+    &__title-span {
+        padding: 0.6rem 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient( to right bottom, rgba($color-natours-light, 0.85), rgba($color-natours-dark, 0.85));
+        }
+        &--2 {
+            background-image: linear-gradient( to right bottom, rgba($color-wc-light, 0.85), rgba($color-wc-dark, 0.85));
+        }
+        &--3 {
+            background-image: linear-gradient( to right bottom, rgba($color-pigdice-light, 0.85), rgba($color-pigdice-dark, 0.85));
+        }
+        &--4 {
+            background-image: linear-gradient( to right bottom, rgba($color-linux-light, 0.85), rgba($color-linux-dark, 0.85));
+        }
+    }
     &__details {
         margin-top: 0.5rem;
         ul {
@@ -35,15 +73,62 @@
             li {
                 padding: 1.2rem 0rem;
                 margin: 0 2.5rem;
-                &:not(:last-child){
+                &:not(:last-child) {
                     border-bottom: 1px solid $color-grey-light-1;
                 }
-
-                a:link,a:visited{
-                    text-decoration: none;
-                    color: $color-primary-dark;
-                }
             }
+        }
+    }
+}
+
+.tech-img {
+    width: auto;
+    height: 3rem;
+    padding: 0 1rem;
+}
+
+.live-link {
+    &--1:link,
+    &--1:visited {
+        text-decoration: none;
+        color: $color-primary-dark;
+        text-transform: uppercase;
+        transition: all .2s;
+        &:hover {
+            color: $color-natours-dark;
+        }
+    }
+
+    &--2:link,
+    &--2:visited {
+        text-decoration: none;
+        color: $color-primary-dark;
+        text-transform: uppercase;
+        transition: all .2s;
+        &:hover {
+            color: $color-wc-dark;
+        }
+    }
+
+    &--3:link,
+    &--3:visited {
+        text-decoration: none;
+        color: $color-primary-dark;
+        text-transform: uppercase;
+        transition: all .2s;
+        &:hover {
+            color: $color-pigdice-dark;
+        }
+    }
+
+    &--4:link,
+    &--4:visited {
+        text-decoration: none;
+        color: $color-primary-dark;
+        text-transform: uppercase;
+        transition: all .2s;
+        &:hover {
+            color: $color-linux-dark;
         }
     }
 }
